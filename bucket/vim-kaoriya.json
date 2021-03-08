@@ -1,0 +1,43 @@
+{
+  "version": "8.2.1287",
+  "architecture": {
+    "32bit": {
+      "extract_dir": "vim82-kaoriya-win32",
+      "hash": "dcb3ee8ad4866624859da2499da81bea0bbe2e1fcd5e9874595c6d499b2b94fa",
+      "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.2.1287-20200724/vim82-kaoriya-win32-8.2.1287-20200724.zip"
+    },
+    "64bit": {
+      "extract_dir": "vim82-kaoriya-win64",
+      "hash": "72e9035943a4fd437c453bd089bc23dd8c440e401735334c0cbe51d5b9e418a0",
+      "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.2.1287-20200724/vim82-kaoriya-win64-8.2.1287-20200724.zip"
+    }
+  },
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "extract_dir": "vim$majorVersion$minorVersion-kaoriya-win32",
+        "url": "https://github.com/koron/vim-kaoriya/releases/download/v$version-$matchDate/vim$majorVersion$minorVersion-kaoriya-win32-$version-$matchDate.zip"
+      },
+      "64bit": {
+        "extract_dir": "vim$majorVersion$minorVersion-kaoriya-win64",
+        "url": "https://github.com/koron/vim-kaoriya/releases/download/v$version-$matchDate/vim$majorVersion$minorVersion-kaoriya-win64-$version-$matchDate.zip"
+      }
+    }
+  },
+  "bin": [
+    "gvim.exe",
+    "vim.exe"
+  ],
+  "checkver": {
+    "url": "https://github.com/koron/vim-kaoriya/releases/latest",
+    "re": "v(?<version>[\\d.]+)-(?<date>\\d{8})"
+  },
+  "homepage": "https://www.kaoriya.net/software/vim/",
+  "license": "vim",
+  "shortcuts": [
+    [
+      "gvim.exe",
+      "GVim"
+    ]
+  ]
+}

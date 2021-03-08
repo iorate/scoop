@@ -1,0 +1,38 @@
+{
+  "version": "1.65",
+  "architecture": {
+    "32bit": {
+      "hash": "ce95bbb0fa6cfb13f9a426b59f6121e8ad94eeb16f5fcbe3324777ec90526b8d",
+      "url": "http://akt.d.dooo.jp/lzh/afxw32_165.zip"
+    },
+    "64bit": {
+      "hash": "c2bae5300de307024705b87a4a28909f31fb67b5e2a5667885a22eae9abadb74",
+      "url": "http://akt.d.dooo.jp/lzh/afxw64_165.zip"
+    }
+  },
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "url": "http://akt.d.dooo.jp/lzh/afxw32_$cleanVersion.zip"
+      },
+      "64bit": {
+        "url": "http://akt.d.dooo.jp/lzh/afxw64_$cleanVersion.zip"
+      }
+    }
+  },
+  "bin": [
+    "afxw.exe"
+  ],
+  "checkver": {
+    "url": "http://akt.d.dooo.jp/akt_afxw.html",
+    "re": "v (?<version>[\\d.]+)"
+  },
+  "homepage": "http://akt.d.dooo.jp/akt_afxw.html",
+  "license": "Freeware",
+  "shortcuts": [
+    [
+      "afxw.exe",
+      "あふｗ"
+    ]
+  ]
+}
