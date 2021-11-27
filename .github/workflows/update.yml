@@ -3,6 +3,7 @@ name: update
 on:
   schedule:
     - cron: '0 15 * * SUN'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -11,8 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: update versions
-        run: .\bin\checkver.ps1 -Update
+      - name: install scoop and update versions
+        run: |
+          Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+          Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+          .\bin\checkver.ps1 -Update
         shell: pwsh
 
       - name: count changes
